@@ -2,7 +2,7 @@
 int main(){
     float num;
     
-    scanf("%f",&a);
+    scanf("%f",&num);
     printf("you entered :%.2f,num")
 }
 
