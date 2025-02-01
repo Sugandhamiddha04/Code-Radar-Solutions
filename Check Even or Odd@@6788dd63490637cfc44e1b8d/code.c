@@ -2,9 +2,9 @@
 
 int main() {
     int num;
-    printf("Enter a single integer: ");
-    scanf("%d",num);
-    if(num%2 == 0){
+    
+    scanf("%d",&num);
+    if(num % 2 == 0){
         printf("Even");
 
     }else{
