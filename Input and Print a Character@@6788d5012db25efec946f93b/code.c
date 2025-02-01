@@ -2,9 +2,9 @@
 
 int main(){
 char c;
-printf("enter a alphabet: %c");
+
 scanf("%c", &c);
-printf("you entered : ",c);
+printf("You entered : ",c);
 
     return 0;
 }
