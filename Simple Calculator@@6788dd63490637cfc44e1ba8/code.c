@@ -4,6 +4,7 @@ int main() {
     int num1,num2;
     char op;
     if(scanf("%d" "%d" "%c" , &num1,&num2,&op) !=3){
+        printf("invalid format");
         return 1;
     }
     switch(op){
