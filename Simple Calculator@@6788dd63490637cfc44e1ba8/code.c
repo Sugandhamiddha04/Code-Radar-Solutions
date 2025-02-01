@@ -3,7 +3,7 @@
 int main() {
     int num1,num2;
     char op;
-    if(scanf("%d" "%d" "%c" , &num1,&num2,&op) !=3;){
+    if(scanf("%d" "%d" "%c" , &num1,&num2,&op) !=3){
         return 1;
     }
     switch(op){
