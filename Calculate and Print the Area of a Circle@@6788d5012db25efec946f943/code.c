@@ -2,8 +2,9 @@
 
 int main() {
     float rad;
-    scanf("%.1f", &rad);
-    float area = 3.14*rad*rad;
+    float pi= 3.14;
+    scanf("%f", &rad);
+    float area = pi * rad * rad;
     printf("Area: %.2f",area)
    
     return 0;
