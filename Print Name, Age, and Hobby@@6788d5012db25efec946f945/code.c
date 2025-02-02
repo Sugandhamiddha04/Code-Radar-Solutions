@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    char name;
+    char name[100];
     int age;
     char str[100];
     scanf("%c %d %c",&name,&age,&str);
