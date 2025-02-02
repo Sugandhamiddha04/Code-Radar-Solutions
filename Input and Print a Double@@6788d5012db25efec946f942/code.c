@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int mian() {
+int main() {
     double num;
     scanf("%lf" , &num);
-    printf("You eneterd:%lf", num);
+    printf("You eneterd: %lf", num);
     
     return 0;
 }
