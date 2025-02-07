@@ -7,8 +7,8 @@ int main() {
         for( int j = 1 ; j <= N - i ; j++){
             printf(" ");
         }
-        for( int j = o ; j<=i ; j++){
-            printf("%c " , 'A'+j);
+        for( int j=0 ; j<=i ; j++){
+            printf("%c " ,'A'+j);
         }
         printf("\n");
     }
