@@ -1,24 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int n, i, isPalindrome = 1;
     scanf("%d", &n);
-    int arr[1000];
-    int present[1001] = {0}; 
-    for (int i = 0; i < n; i++) {
+    int arr[n];
+
+   
+    for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-        if (arr[i] > 0 && arr[i] <= 1000) {
-            present[arr[i]] = 1; 
+    }
+
+   
+    for (i = 0; i < n / 2; i++) {
+        if (arr[i] != arr[n - 1 - i]) {
+            isPalindrome = 0;
+            break;
         }
     }
 
     
-    for (int i = 1; i <= 1000; i++) {
-        if (present[i] == 0) {
-            printf("%d\n", i);
-            break;
-        }
-    }
+    if (isPalindrome)
+        printf("YES\n");
+    else
+        printf("NO\n");
 
     return 0;
 }
