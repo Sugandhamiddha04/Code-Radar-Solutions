@@ -1,22 +1,15 @@
-// Your code here...
 #include <stdio.h>
 
 int main() {
     int N;
-    scanf("%d", &N); // Read the size of the array
+    scanf("%d", &N);
 
-    int arr[N];
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    int maxEven = -1;
+    int num, maxEven = -1;
 
     for (int i = 0; i < N; i++) {
-        if (arr[i] % 2 == 0) {
-            if (arr[i] > maxEven) {
-                maxEven = arr[i];
-            }
+        scanf("%d", &num); 
+        if (num % 2 == 0 && num > maxEven) {
+            maxEven = num; 
         }
     }
 
