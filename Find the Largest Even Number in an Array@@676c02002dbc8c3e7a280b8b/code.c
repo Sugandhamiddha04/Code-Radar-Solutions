@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int N;
-    scanf("%d", &N);
-
-    int num, maxEven = -1;
+    int N, num, maxEven = -1;
+    scanf("%d", &N); // Read the number of elements
 
     for (int i = 0; i < N; i++) {
-        scanf("%d", &num); 
-        if (num % 2 == 0 && num > maxEven) {
-            maxEven = num; 
+        scanf("%d", &num); // Read each number
+        if (num % 2 == 0) {
+            if (maxEven == -1 || num > maxEven) {
+                maxEven = num;
+            }
         }
     }
 
-    printf("%d\n", maxEven); 
+    printf("%d\n", maxEven);
     return 0;
 }
