@@ -1,24 +1,46 @@
 #include <stdio.h>
 
 int main() {
-    int N, T;
-    scanf("%d", &N); // Read number of elements
+    int n, t;
+    scanf("%d", &n);
 
-    int arr[N];
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]); // Read array elements
+    int arr[100], i, j;
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
 
-    scanf("%d", &T); // Read target sum
+    scanf("%d", &t); 
 
-    // Check all unique pairs
-    for (int i = 0; i < N; i++) {
-        for (int j = i + 1; j < N; j++) {
-            if (arr[i] + arr[j] == T) {
-                // Print the pair
-                printf("%d %d\n", arr[i], arr[j]);
-                // Avoid printing the same pair again
-                break;
+    
+    int printed[100][2];
+    int printedCount = 0;
+
+    for (i = 0; i < n; i++) {
+        for (j = i + 1; j < n; j++) {
+            if (arr[i] + arr[j] == t) {
+                int x = arr[i];
+                int y = arr[j];
+                if (x > y) {
+                    int temp = x;
+                    x = y;
+                    y = temp;
+                }
+
+               
+                int found = 0;
+                for (int k = 0; k < printedCount; k++) {
+                    if (printed[k][0] == x && printed[k][1] == y) {
+                        found = 1;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    printf("%d %d\n", x, y);
+                    printed[printedCount][0] = x;
+                    printed[printedCount][1] = y;
+                    printedCount++;
+                }
             }
         }
     }
